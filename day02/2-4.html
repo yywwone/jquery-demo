@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>基本过滤选择器</title>
+<style>
+	h2{
+		color: #fff;
+		background: #39f;
+		font-weight: bold;
+		width: 320px;
+		height: 40px;
+		font-family: "黑体";
+		padding-top: 10px;
+		padding-left: 20px;
+	}
+	ul{
+		width: 300px;
+	}
+</style>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+				$("h2").click(function(){
+				
+						$("ul li:odd").css("background","#ffe773");	
+				})
+		})
+</script>
+</head>
+
+<body>
+<h2>用户交互设计学习参考书</h2>
+<ul>
+	<li>JavaScript</li>
+	<li>锋利的JQuery</li>
+	<li>JQuery入门与提高</li>
+	<li>JavaScript高级编程</li>
+	<li>JQuery权威指南</li>
+	<li>JQuery实战</li>
+</ul>
+</body>
+</html>

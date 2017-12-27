@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>选项卡2(ajax异步(JQ))</title>
+<style>
+	*{
+		margin: 0;padding: 0;
+	}
+	.container{
+		width: 376px;
+		margin: 25px auto;
+	}
+	.tabTit li{
+		float: left;
+		width: 124px;
+		height: 38px;
+		border: 1px solid #00f;
+		text-align: center;
+		background: #ccf;
+		line-height: 38px;
+		list-style: none;
+		border-right: none;
+		-moz-border-radius-topright:5px;
+		-webkit-border-top-right-radius:5px;
+		border-top-right-radius:5px;
+		-moz-border-radius-topleft:5px;
+		-webkit-border-top-left-radius:5px;
+		border-top-left-radius:5px;
+	}
+	.tabTit li:last-child{
+		border-right: 1px solid #00f;
+	}
+	.tabTit li:hover{
+		background: #aaaaff;
+		cursor: pointer;
+	}
+	.tabTit .active{
+		background: #fff;
+	}
+	.tabCon{
+		float: left;
+		width: 374px;
+		height: 400px;
+		border: 1px solid #00f;
+		border-top: none;
+		overflow: auto;
+	}
+	.tabCon img{
+		float: left;
+	}
+	.tabCon p{
+		margin-left: 5px;
+		margin-right: 5px;
+		text-indent: 2em;
+	}
+	.tabCon h1{
+		margin-left: 5px;
+	}
+</style>
+</head>
+
+<body>
+<div id="container" class="container">
+	<ul id="tabTit" class="tabTit">
+		<li name="mytab" class="active">HTML5</li>
+		<li name="mytab">CSS3</li>
+		<li name="mytab">HAVASCRIPT</li>
+	</ul>
+	<div id="tabCon" class="tabCon" style="display: block"><br><img src="pic_html5.gif" width="128" height="128" alt=""><h1>html5</h1><p id="a1">1</p></div>	
+</div>
+<script src="a_JQ/jquery-1.11.1.min.js"></script>
+<script>
+	var tabData= new Array(3);
+	$('#tabTit li').click(function(){
+		var index =$(this).index();
+		if(!tabData[index]){
+			$.ajax({
+				type:"get",
+				url:"my"+index+".html",
+				success:function(data){
+				tabData[index]=data;
+				$('#tabCon').html(tabData[index]);
+			}
+			});
+		}else{
+			$('#tabCon').html(tabData[index]);
+		}
+		$(this).addClass('active').siblings().removeClass('active');
+	});
+	$('#tabTit li:first-child').trigger("click")
+	
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>图片提示(插件)</title>
+ 
+<style type="text/css">
+body{
+	margin:0;
+	padding:40px;
+	background:#fff;
+	font:80% Arial, Helvetica, sans-serif;
+	color:#555;
+	line-height:180%;
+}
+img{border:none;}
+ul,li{
+	margin:0;
+	padding:0;
+}
+li{
+	list-style:none;
+	float:left;
+	display:inline;
+	margin-right:30px;
+	border:1px solid #AAAAAA;
+}
+
+/* tooltip */
+#tooltip{
+	position:absolute;
+	border:1px solid #ccc;
+	background:#333;
+	padding:2px;
+	display:none;
+	color:#fff;
+}
+</style>
+<script src="a__JQ/jquery-1.11.1.min.js"></script>
+<script src="jquery.prompt.js"></script>
+<script>
+	$(function(){
+		$('img').tooltip({
+			ele:'.tooltip',	//调用对象
+			x:50,			//设置X参数
+			y:50			//设置Y参数
+		})
+	})
+</script>
+
+
+</head>
+<body>
+<h3>有效果：</h3>
+	<ul>
+		<li>
+		<a href="images/iphone5s-big.jpg" class="tooltip" title="iphone5s">
+		<img src="images/iphone5s-small.jpg" alt="苹果 iPod"/></a>
+		</li>
+		<li>
+		<a href="images/samsung-big.jpg" class="tooltip" title="三星Note">
+		<img src="images/samsung-small.jpg" alt="苹果 iPod nano"/></a>
+		</li>
+		<li>
+		<a href="images/xiaomiM4-big.jpg" class="tooltip" title="小米M4">
+		<img src="images/xiaomiM4-small.jpg" alt="苹果 iPhone"/></a>
+		</li>		
+</ul>
+
+
+<br/><br/><br/><br/>
+<br/><br/><br/><br/>
+
+
+<h3>&nbsp;</h3>
+<h3>无效果：</h3>
+<ul>
+  <li><a href="images/iphone5s-big.jpg" title="iphone5s"><img src="images/iphone5s-small.jpg" alt="苹果 iPod" /></a></li>
+		<li><a href="images/samsung-big.jpg" title="三星Note"><img src="images/samsung-small.jpg" alt="苹果 iPod nano"/></a></li>
+		<li><a href="images/xiaomiM4-big.jpg" title="小米M4"><img src="images/xiaomiM4-small.jpg" alt="苹果 iPhone"/></a></li>
+		
+	</ul>
+</body>
+</html>

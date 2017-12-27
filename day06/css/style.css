@@ -1,0 +1,28 @@
+@charset "utf-8";
+/*清除浏览器默认内、外边距*/
+*{margin:0;padding:0;}
+body {font-size:11pt;background:url(../img/body-bg.gif) repeat;}
+p,dt,dd{
+	width:400px;
+	height:20px;
+	opacity:.6;
+	padding:10px;
+	line-height:20px;
+	margin-top:5px;
+	text-align:left;
+	border-radius:6px;
+	background:#92D6E7;
+}
+p {
+	margin-top:20px;
+	font-size:13pt;
+	text-align:center;
+	background:#ACE6BB;
+}
+dd {
+	width:360px;
+	height:40px;
+	margin-right:40px;
+	background:#F5DEA0;
+	display:none;
+}

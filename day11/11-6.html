@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>全选 全不选 反选</title>
+<script src="a_JQ/jquery-1.11.1.min.js"></script>
+<script src="jquery.check.js"></script>
+<script>
+	$(function(e){
+		$("#btn1").click(function(){
+			$("input[type='checkbox']").check('on');
+		});
+		
+		$("#btn2").click(function(){
+			$("input[type='checkbox']").check('off');
+		});
+		
+		$("#btn3").click(function(){
+			$("input[type='checkbox']").check('toggle');
+		});
+		
+	});
+</script>
+</head>
+
+<body>
+<h1>请选择你喜欢的水果</h1>
+<input type="checkbox" value="apple">苹果
+<input type="checkbox" value="banner">香蕉
+<input type="checkbox" value="Watermelon">西瓜
+<input type="checkbox" value="litchi">荔枝
+<input type="checkbox" value="purple">葡萄
+<br>
+<br>
+<input type="button" value="全选" id="btn1">
+<input type="button" value="全不选" id="btn2">
+<input type="button" value="反选" id="btn3">
+
+
+</body>
+</html>

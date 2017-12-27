@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>编写插件(隔行换色)</title>
+<style type="text/css">  
+    table       { border:0;border-collapse:collapse;}  
+    td  { font:normal 12px/17px Arial;padding:2px;width:100px;}  
+    th          { font:bold 12px/17px Arial;text-align:left;padding:4px;border-bottom:1px   solid #333; color:#F00;}  
+    .even       { background:#FFF38F;}  /* 偶数行样式*/  
+    .odd        { background:#FFFFEE;}  /* 奇数行样式*/  
+    .selected   { background:#FF6500;color:#fff;}  
+</style> 
+<script src="a_JQ/jquery-1.11.1.min.js"></script>
+<script>
+;(function($){
+	$.fn.extend({
+		"alterBgColor":function(options){
+			options=$.extend({
+				odd:"odd",
+				even:"even",
+				selected:"selected",
+			},options);
+			$("tbody>tr:odd",this).addClass(options.odd);
+			$("tbody>tr:even",this).addClass(options.even);
+			$('tbody>tr',this).click(function(){
+				var hasSelect=$(this).hasClass(options.selected);
+				if(hasSelect){
+					$(this).removeClass(options.selected);
+					//$(this).find(':checkbox').removeAttr('checked');
+					$(this).find(':checkbox')[0].checked=false;
+				}else{
+					$(this).addClass(options.selected);
+					//$(this).find('checkbox').attr('checked','true');
+					$(this).find(':checkbox')[0].checked=true;
+				}
+			});
+			$('tbody>tr:has(:checked)',this).addClass(options.selected);
+			return this;
+		},
+		color:function(value){
+			return this.css("color",value);
+		}
+	})
+})(jQuery)
+$(function(){
+	$("#table2").alterBgColor().find("th").color("green");
+})
+</script> 
+
+
+
+</head>
+
+<body>
+<table id="table1">  
+    <thead><tr><th> </th><th>学号</th><th>姓名</th><th>性别</th></tr></thead>  
+    <tbody>  
+        <tr>  
+            <td><input type="checkbox" name="choice" value=""/></td>  
+            <td>20141201</td>  
+            <td>陈毅炫</td>  
+            <td>男</td>  
+        </tr>  
+        <tr>  
+            <td><input type="checkbox" name="choice" value="" /></td>  
+             <td>20141202</td>  
+            <td>李伟涛</td>  
+            <td>男</td>  
+        </tr>  
+        <tr>  
+            <td><input type="checkbox" name="choice" value="" checked="checked" /></td>  
+            <td>20141203</td>  
+            <td>张晓佳</td>  
+            <td>女</td>  
+        </tr>  
+        <tr>  
+            <td><input type="checkbox" name="choice" value="" /></td>  
+            <td>20141204</td>  
+            <td>朱俊亮</td>  
+            <td>男</td>     
+        </tr>  
+        <tr>  
+        <td><input type="checkbox" name="choice" value="" /></td>  
+            <td>20141205</td>  
+            <td>吴家良</td>  
+            <td>男</td>  
+        </tr>  
+        <tr>  
+            <td><input type="checkbox" name="choice" value="" checked="checked" /></td>  
+            <td>20141206</td>  
+            <td>黄小桂</td>  
+            <td>女</td>  
+        </tr>  
+    </tbody>  
+</table>  
+  
+  
+<table id="table2">  
+    <thead><tr><th> </th><th>学号</th><th>姓名</th><th>性别</th></tr></thead>  
+    <tbody>  
+        <tr>  
+            <td><input type="checkbox" name="choice" value=""/></td>  
+            <td>20141201</td>  
+            <td>陈毅炫</td>  
+            <td>男</td>  
+        </tr>  
+        <tr>  
+            <td><input type="checkbox" name="choice" value="" /></td>  
+             <td>20141202</td>  
+            <td>李伟涛</td>  
+            <td>男</td>  
+        </tr>  
+        <tr>  
+            <td><input type="checkbox" name="choice" value="" checked="checked" /></td>  
+            <td>20141203</td>  
+            <td>张晓佳</td>  
+            <td>女</td>  
+        </tr>  
+        <tr>  
+            <td><input type="checkbox" name="choice" value="" /></td>  
+            <td>20141204</td>  
+            <td>朱俊亮</td>  
+            <td>男</td>     
+        </tr>  
+        <tr>  
+        <td><input type="checkbox" name="choice" value="" /></td>  
+            <td>20141205</td>  
+            <td>吴家良</td>  
+            <td>男</td>  
+        </tr>  
+        <tr>  
+            <td><input type="checkbox" name="choice" value="" checked="checked" /></td>  
+            <td>20141206</td>  
+            <td>黄小桂</td>  
+            <td>女</td>  
+        </tr>  
+    </tbody>  
+</table>  
+
+
+</body>
+</html>

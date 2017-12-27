@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<title>用淡出实现删除效果</title>
+
+<script type="text/javascript" src="jquery.js"></script>
+<style type="text/css">
+body {
+	margin: 10px auto;
+	width: 470px;
+	font-size:12px;
+}
+h3 {
+	margin: 0;
+	padding: 0 0 .3em;
+}
+p {
+	margin: 0;
+	padding: 0 0 .5em;
+}
+.pane {
+	background: #edf5e1;
+	padding: 10px 20px 10px;
+	position: relative;
+	border-top: solid 2px #c4df9b;
+}
+.pane .delete {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+</style>
+<script src="a_JQ/jquery-1.11.1.min.js"></script>
+<script>
+	$(function(){
+		$(".delete").click(function(){
+			$(this).parent(".pane").fadeOut(1000)
+		})
+	})
+</script>
+</head>
+
+<body>
+<div class="pane">
+	<h3>关于网站</h3>
+	<p>站酷（www.zcool.com.cn）诞生于2006年8月。站酷（ZCOOL）以分享最新最实用的素材资源，和提供最贴心的交流学习及自我推荐的平台为主要内容，以“为设计师及设计爱好者服务”为宗旨</p>
+	<img src="images/btn-delete.gif" alt="delete" class="delete" />
+</div>
+<div class="pane">
+	<h3>我要投稿</h3>
+	<p>《站酷志》第3期正在征稿，投稿日期：即日起～2008年7月20日。《站酷志》，由站酷（ZCOOL）制作并发布。以推荐国内年轻设计师、交流优秀设计理念、分享实用技术技巧为主旨，并以电子杂志的形式陆续进行免费发布。是站酷（ZCOOL）为设计师及设计爱好者，提供的交流学习及自我推荐的新平台。</p>
+	<img src="images/btn-delete.gif" alt="delete" class="delete" />
+</div>
+<div class="pane">
+	<h3>版权隐私</h3>
+	<p>站酷（ZCOOL）及社区会员所提供下载的资源（包括素材、软件等），版权归原作者所有。本站仅供学习与参考，请勿使用于商业用途。如需作商业用途，请与原作者联系。本站在建设中引用了因特网上的一些资源并对有明确来源的注明了出处，版权归原作者及网站所有。如有侵犯您的版权，请及时联系我们，我们将立即改正。</p>
+	<img src="images/btn-delete.gif" alt="delete" class="delete" />
+</div>
+<div class="pane">
+	<h3>Sample heading</h3>
+	<p>未经本站明确许可，任何人不得盗链本站下载资源；不得复制或仿造本网站或者在非站酷（ZCOOL）所属的服务器上建立镜像。本站所有页面的版式版权均为本站所有，未经授权，不得用于除站酷(ZCOOL)之外的任何站点。</p>
+	<img src="images/btn-delete.gif" alt="delete" class="delete" />
+</div>
+<div class="pane">
+	<h3>Sample heading</h3>
+	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi malesuada, ante at feugiat tincidunt, enim massa gravida metus, commodo lacinia massa diam vel eros. Proin eget urna. Nunc fringilla neque vitae odio. Vivamus vitae ligula.</p>
+	<img src="images/btn-delete.gif" alt="delete" class="delete" />
+</div>
+<br />
+
+</body>
+</html>

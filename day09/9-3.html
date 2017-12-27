@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<title>Simple Slide Panel_站酷（ZCOOL）_www.zcool.com.cn</title>
+<style type="text/css">
+body {
+	margin: 0 auto;
+	padding: 0;
+	width: 570px;
+	font: 75%/120% Arial, Helvetica, sans-serif;
+}
+a:focus {
+	outline: none;
+}
+#panel {
+	background: #754c24;
+	height: 200px;
+	display: none;
+	padding:15px 5px 0px 5px;
+}
+.slide {
+	margin: 0;
+	padding:0px;
+	border-top: solid 4px #422410;
+	background: url(images/btn-slide.gif) no-repeat center top;
+}
+.btn-slide {
+	background: url(images/white-arrow.gif) no-repeat right -50px;
+	text-align: center;
+	width: 144px;
+	height: 31px;
+	padding: 10px 10px 0 0;
+	margin: 0 auto;
+	display: block;
+	font: bold 120%/100% Arial, Helvetica, sans-serif;
+	color: #fff;
+	text-decoration: none;
+}
+.active {
+	background-position: right 12px;
+}
+</style>
+<script src="a_JQ/jquery-1.8.3.min.js"></script>
+<script>
+	$(function(){
+		$(".btn-slide").toggle(function(){
+			$("#panel").slideDown();
+			$(this).addClass("active");
+		},function(){
+			$("#panel").slideUp();
+			$(this).removeClass("active");
+		})
+	})
+</script>
+</head>
+
+<body>
+
+<div id="panel">
+	<p style="margin: 5px;color: #fff;line-height:20px;">&nbsp;&nbsp;&nbsp;&nbsp;XX技术职业学院是省政府批准设立的普通高等学校，正厅级建制，成立于1985年，前身是XX省科技干部学院，2003年正式改制为普通高等学校，同时保留了承担科技干部培训的重要功能，形成了高等教育和干部培训“双轮驱动”的办学特色。学院发展至今，现有珠海和广州两个校区，珠海校区是学院的主校区以及学院的办公主体和办学主体，广州校区则利用地理位置优势继续开展干部培训及继续教育工作。
+    学院以“厚德、高能、求实、创新”为校训，秉承“工学融合，践行校企双主体人才培养模式；与时俱进，培养社会真欢迎一线高端人才”的办学理念。</p>
+</div>
+<p class="slide"><a href="#" class="btn-slide">了解学校</a></p>
+</body>
+</html>

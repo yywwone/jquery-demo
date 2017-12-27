@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>增减购物车商品信息 </title>
+<script type="text/javascript" src="js/jquery-1.8.3.js" ></script>
+<script>
+	$(function(){
+	//删除<tr>元素
+		$("table").on("click",".del",function(){
+			$(this).parent().parent().remove();
+		})
+		
+		
+	$(".add").click(function(){
+		//创建新节点
+		var  $newpro =$("<tr>"
+			+"<td>"
+			+"<input name='' type='checkbox' value=''>"
+			+"<td>"
+			+"<img src='img/computer.jpg' class='products'>"
+			+"<a href='#'>联想笔记本电脑</a>"
+			+"</td>"
+			+"<td>￥3189元</td>"
+			+"<td>"
+			+"<input type='text' class='quantity' value='1'>"
+			+"</td>"
+			+"<td>"
+			+"<a href='#' class='del'>删除</a></td>"
+			+"</tr>");
+		//在table中插入新建节点
+		$("table").append($newpro);
+	})
+})
+</script>
+<style type="text/css" >
+*{
+	font-size:12px;
+}
+
+</style>
+</head>
+<body> 
+<table border="1" cellpadding="0" cellspacing="0"> 
+	<tr>
+    	<th><input type='checkbox' />全选</th>
+        <th>商品信息</th>
+        <th>宜美惠价</th>
+        <th>数量</th>
+        <th>操作</th>
+        
+    </tr>
+
+   	<tr class="tr_0">
+       	<td>
+           	<input name="" type="checkbox" value=""/>
+           </td>
+           <td>
+           	<img src="img/sang.gif" class="products"/><a href="#">天堂雨伞</a></td><td>￥32.9元
+           </td>
+           <td>
+         	  	<img src="img/subtraction.gif" width="20" height="20"/>
+           	<input type="text" class="quantity" value="1"/>
+           	<img src="img/add.gif" width="20" height="20"/>
+          </td>
+			  <td>
+					<a href="#" class="del">删除</a>
+			  </td>
+       </tr>
+       <tr>
+       	<td>
+           	<input name="" type="checkbox" value=""/>
+           </td>
+           <td>
+           	<img src="img/iphone.gif" class="products"/><a href="#">苹果手机iphone5</a></td><td>￥3339元
+           </td>
+           <td>
+         	  	<img src="img/subtraction.gif" width="20" height="20"/>
+           	<input type="text" class="quantity" value="1"/>
+           	<img src="img/add.gif" width="20" height="20"/>
+          </td>
+          <td>
+          		<a href="#" class="del">删除</a>
+          </td>
+       </tr>
+
+ </table>
+ 
+ <a href="#" class="add">添加</a>
+</body>
+</html>

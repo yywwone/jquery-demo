@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>清除左右空格</title>
+<script src="a_JQ/jquery-1.11.1.min.js"></script>
+<script>
+;(function($){
+	$.extend({
+		ltrim:function(text){
+			return(text||"").replace(/^\s+/g,"")
+		},
+		rtrim:function(text){
+			return(text||"").replace(/\s+$/g,"");
+		}
+	});
+})(jQuery);
+	
+	$(function(){
+		//清除左侧空格
+		var str="       hello       ";
+		window.alert("###"+str+"###");
+		window.alert("###"+$.ltrim(str)+"###");
+		//清除右侧空格
+		window.alert("###"+$.rtrim(str)+"###");
+	});
+</script>
+</head>
+
+<body>
+</body>
+</html>

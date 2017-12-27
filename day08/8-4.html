@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<title>隐藏式评论</title>
+<script type="text/javascript"></script>
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin: 10px auto;
+	width: 570px;
+	font: 75%/120% Arial, Helvetica, sans-serif;
+}
+p {
+	padding: 0 0 1em;
+}
+/* message display page */
+.message_list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 383px;
+}
+.message_list li {
+	padding: 0;
+	margin: 0;
+	background: url(images/message-bar.gif) no-repeat;
+}
+.message_head {
+	padding: 5px 10px;
+	cursor: pointer;
+	position: relative;
+}
+.message_head .timestamp {
+	color: #666666;
+	font-size: 95%;
+	position: absolute;
+	right: 10px;
+	top: 5px;
+}
+.message_head cite {
+	font-size: 100%;
+	font-weight: bold;
+	font-style: normal;
+}
+.message_body {
+	padding: 5px 10px 15px;
+}
+.collapse_buttons {
+	text-align: right;
+	border-top: solid 1px #e4e4e4;
+	padding: 5px 0;
+	width: 383px;
+}
+.collapse_buttons a {
+	margin-left: 15px;
+	float: right;
+}
+.show_all_message {
+	background: url(images/tall-down-arrow.gif) no-repeat right center;
+	padding-right: 12px;
+}
+.show_recent_only {
+	display: none;
+	background: url(images/tall-up-arrow.gif) no-repeat right center;
+	padding-right: 12px;
+}
+.collpase_all_message {
+	background: url(images/collapse-all.gif) no-repeat right center;
+	padding-right: 12px;
+	color: #666666;
+}
+.collpase_all_message1 {
+	padding-right: 12px;
+	color: #666666;
+}
+</style>
+<script src="a_JQ/jquery.js"></script>
+<script>
+	$(function(){
+		//隐藏大于4的评论
+		$(".message_list li:gt(4)").hide();
+		$(".message_head").next(".message_body:not(:first)").hide();  //除了第一条其余评论内容全部隐藏
+		//展开所有评论
+		$(".show_all_message").click(function(){
+			$(".message_list li:gt(4)").slideDown();
+			$(".show_all_message").hide();
+			$(".show_recent_only").show();
+		});
+		//只显示5条评论
+		$(".show_recent_only").click(function(){
+			$(".message_list li:not(:lt(5))").slideUp();
+			$(".show_all_message").show();
+			$(".show_recent_only").hide();
+		});
+		//单击显示/隐藏 评论内容
+		$(".message_head").click(function(){
+			$(this).next().slideToggle()(500)
+		})
+		//折叠所有内容
+		$(".collpase_all_message").click(function(){
+			$(".message_head").next().slideUp(500);
+		})
+		//展开所有内容
+		$(".collpase_all_message1").click(function(){
+			$(".message_head").next().slideDown(500);
+		})
+		
+		
+	})
+</script>
+</head>
+<body>
+<ol class="message_list">
+	<li>
+		<p class="message_head"><cite>功夫熊猫</cite> <span class="timestamp">5分钟前</span></p>
+		<div class="message_body">
+			<p>Hello Nick,<br /><br />This is the latest message display. The rest are collapsed by default</p>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>小马哥:</cite> <span class="timestamp">10分钟前</span></p>
+		<div class="message_body">
+			<p>message here</p>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>一休:</cite> <span class="timestamp">22分钟前</span></p>
+		<div class="message_body">
+			<p>message here</p>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>么么哒:</cite> <span class="timestamp">23分钟前</span></p>
+		<div class="message_body">
+			<p>message here</p>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>女人情:</cite> <span class="timestamp">24分钟前</span></p>
+		<div class="message_body">
+			<p>message here</p>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>小苹果:</cite> <span class="timestamp">25分钟前</span></p>
+		<div class="message_body">
+			<p>message here</p>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>香水有毒:</cite> <span class="timestamp">1小时前</span></p>
+		<div class="message_body">
+			<p>message here</p>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>旋风小子:</cite> <span class="timestamp">2小时前</span></p>
+		<div class="message_body">
+			<p>message here</p>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>处处留情:</cite> <span class="timestamp">1天前</span></p>
+		<div class="message_body">
+			<p>message here</p>
+		</div>
+	</li>
+</ol>
+<p class="collapse_buttons">
+	<a href="#" class="show_all_message">显示所有评论</a>
+	<a href="#" class="show_recent_only">只显示5条</a>
+	<a href="#" class="collpase_all_message">折叠所有</a>
+	<a href="#" class="collpase_all_message1">展开所有</a>
+	
+</p>
+<br />
+</body>
+</html>

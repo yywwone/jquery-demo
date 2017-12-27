@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>设置获取颜色</title>
+<style type="text/css">
+	div{
+		color: #33c;
+		background: #ffc;
+		width: 100px;
+		height: 100px;
+	}	
+</style>
+<script type="text/javascript" src="a_JQ/jquery-1.11.1.min.js"></script>
+<script>
+	;(function($){
+		$.fn.extend({
+			color:function(value){
+				return this.css("color",value);
+			},
+			myshow:function(){
+				window.alert("color");
+				return this;
+			},
+		})
+	})(jQuery);
+	function showColor()
+	{
+		$("div").myshow().color("red");
+		$("div").myshow().color("");
+	}
+	
+</script>
+</head>
+
+<body>
+<div onClick="showColor()">测试文字</div>
+</body>
+</html>

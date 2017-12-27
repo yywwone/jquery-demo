@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登录框特效</title>
+<style type="text/css">
+body{
+	width:915px;
+	margin:0px auto;
+	background:url(images/back.jpg);
+	font-size:14px;
+}
+td{
+	height:35px;
+	line-height:30px;
+}
+.right{
+	text-align:right;
+}
+.center{
+	text-align:center;
+}
+.border{
+	border:1px solid #000;
+	color:#CCC;
+}
+</style>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script>
+$(function(){
+	$(".border").each(function(){
+		$(this).focus(function(){
+			if($(this).val()==this.defaultValue){
+				$(this).val("");
+				$(this).removeClass("border"); 
+			}
+		
+		})
+		$(this).blur(function(){
+			if(this.value==""){
+				this.value=this.defaultValue;
+				$(this).addClass("border"); 
+			}
+		});
+	
+	});
+
+});
+</script>
+
+</head>
+
+<body>
+<div id="top"><img src="images/image1.jpg"/></div>
+<h3>首页—登录</h3>
+<table width="30%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="right">用户名：</td>
+    <td><input type="text" id="address" value="请输入邮箱地址" class="border"/></td>
+  </tr>
+  <tr>
+    <td class="right">密&nbsp;&nbsp;码：</td>
+    <td><input type="text" id="password" value="请输入邮箱密码" class="border"/></td>
+  </tr>
+  <tr>
+    <td colspan="2" class="center"><input type="button" value="登  陆"/></td>
+   
+  </tr>
+</table>
+
+</body>
+</html>

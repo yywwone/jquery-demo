@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Test</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <center>
+    <p>JQuery动画篇--常用动画的使用</p>
+    <dl>
+     <dt>1.你知道JQuery的toggle动画吗？</dt>
+      <dd>答：toggle动画是实现show()动画和hide()动画的一个切换方法。</dd>
+     <dt>2.你知道JQuery的fadeToggle动画吗？</dt>
+      <dd>答：fadeToggle动画是实现fadeIn()动画和fadeOut()动画的一个切换方法。</dd>
+     <dt>3.你知道JQuery的slideToggle动画吗？</dt>
+      <dd>答：slideToggle动画是实现slideUp()动画和slideDown()动画的一个切换方法。</dd>
+    </dl>
+  </center>
+</body>
+</html>
+<script src="a_JQ/jquery-1.8.3.min.js"></script>
+<script>
+$("dt:eq(0)").click(function(){$(this).next().toggle(2000)});
+$("dt:eq(1)").click(function(){$(this).next().fadeToggle(2000)});
+$("dt:eq(2)").click(function(){$(this).next().slideToggle(2000)});
+</script>

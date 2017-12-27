@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>可见性过滤选择器</title>
+<style>
+	.tips{
+		width: 250px;
+		padding: 10px;
+		background: #ccffbf;
+		border: solid 1px #73bf60;
+		line-height: 20px;
+		font-size: 12px;
+		display: none;
+	}
+	p{
+		color: #2f402b;
+		font-weight: bold;
+		cursor: pointer;
+	}
+</style>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script>
+	$(document).ready(function(e){
+		$("p").click(function(){
+			if($(".tips").is(":hidden"))
+				$(".tips").show();
+			else
+				$(".tips").hide();
+		})
+	})
+	
+/*
+	$(document).ready(function(e){
+		$("p").mouseover(function(){
+				$(".tips").show();
+			
+		})
+		$("p").mouseout(function(){
+				$(".tips").hide();
+			
+		})
+	})
+
+*/
+</script>
+</head>
+
+<body>
+<p>萝莉是什么意思?</p>
+<div class="tips">
+	萝莉，即洛丽塔的缩写。原指1955年由俄裔美国作家的小说《洛丽塔》，或指小说中的女主角12岁的洛丽塔，后在日本引申发展成一种次文化，用来表示可爱、萌萌哒的小女孩，或用在与其相关的事物，例如洛丽塔时装。被世人公认最早的萝莉角色是1982年推出的《甜甜仙子》中的MOMO公主。
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>iframe框架</title>
+<style>
+	#container{margin: 0 auto; width: 1000px;height: 500px;position: relative;border: #066 solid 1px; background: #066;}
+	#divleft{float: left;width: 300px;;height: 500px; background-color: white}
+	#divright{float: right;width: 699px;height: 500px;background-color: white}
+	ul li{list-style:none}
+	a{color:red;}
+</style>
+</head>
+
+<body>
+<div id="container">
+	<div id="divleft">
+		<ul>
+		<li><a href="../day05/5-1.html" target="myframe">二级导航</a></li>
+		<li><a href="6-2.html" target="myframe">JQ动画</a></li>
+		<li><a href="../day03/3-2.html" target="myframe">留言板</a></li>
+	</ul>	
+	</div>
+	
+	<div id="divright"><iframe name="myframe" frameborder="0" width="100%" height="100%" marginheight="0" marginwidth="0" scrolling="no" src="../day05/5-1.html"</div>
+</div>
+
+</body>
+</html>

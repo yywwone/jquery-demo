@@ -1,0 +1,259 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>三级导航</title>
+
+<style>
+	*{
+		margin: 0;padding: 0;list-style: none;
+	 }	
+	.container{
+		margin: 25px auto;
+		width: 720px; clear: both;
+	}
+	#nav{
+		line-height: 24px;
+		list-style: none;
+		color: #ffffff;
+		position: relative;
+	}
+	#nav a{
+		display: block;
+		width: 100px;
+		text-align: center;
+		color: #fff;
+		text-decoration: none;
+	}
+	#nav a:hover{
+		color: #14E3FC;
+		text-decoration: none;
+	}
+	#nav li{
+		float: left;
+		width: 100px;
+		background: #03c;
+		position: relative;
+		border-right: 1px solid #fff;
+	}
+	#nav li a:hover{
+		background: #666;
+	}
+	#nav li ul{
+		width: 150px;
+		display: none;
+		position: absolute;
+	}
+	#nav li ul li{
+		float: left;
+		width: 150px;
+		background: #66c;
+		line-height: 27px;
+		text-align: left;
+	}
+	#nav li ul a{
+		display: block;
+		width: 130px;
+		text-align: left;
+		padding-left: 20px;
+	}
+	#nav li ul a:hover{
+		font-weight: normal;
+	}
+	.a1{
+		position: relative;
+		
+	}
+	.a2{
+		position: absolute;
+		left: 151px;
+		top: 0px;
+	}
+	
+	
+</style>
+</head>
+
+<body>
+<div class="container">
+<ul id="nav">
+	<li> <a href="#">首页</a></li>
+	<li name="submenu"><a herf="#">UI技术</a>
+		<ul class="a3">
+			<li class="a1"><a href="#">Phostoshop</a>
+				<ul class="a2">
+							<li><a href="#">Html5</a></li>
+							<li><a href="#">css3</a></li>
+							<li><a href="#">JAVASCRIPT</a></li>
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>				
+						</ul>
+			</li>
+			<li class="a1"><a href="#">AI</a>
+				<ul class="a2">
+							<li><a href="#">Html5</a></li>
+							<li><a href="#">css3</a></li>
+							<li><a href="#">JAVASCRIPT</a></li>
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>				
+						</ul>
+			</li>
+			<li class="a1"><a href="#">Axure</a>
+				<ul class="a2">
+							<li><a href="#">Html5</a></li>
+							<li><a href="#">css3</a></li>
+							<li><a href="#">JAVASCRIPT</a></li>
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>				
+						</ul>
+			</li>
+		</ul>
+	</li>
+	<li name="submenu"><a href="#">WEB前端</a>
+		<ul class="a3">
+				<li class="a1"><a href="#">Html5</a>
+					<ul class="a2">
+							<li><a href="#">Html5</a></li>
+							<li><a href="#">css3</a></li>
+							<li><a href="#">JAVASCRIPT</a></li>
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>				
+						</ul>
+				</li>
+					
+				<li class="a1"><a href="#">css3</a>
+					<ul class="a2">
+							<li><a href="#">Html5</a></li>
+							<li><a href="#">css3</a></li>
+							<li><a href="#">JAVASCRIPT</a></li>
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>				
+						</ul>
+				</li>
+				
+				<li class="a1"><a href="#">JAVASCRIPT</a>
+					<ul class="a2">
+							<li><a href="#">Html5</a></li>
+							<li><a href="#">css3</a></li>
+							<li><a href="#">JAVASCRIPT</a></li>
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>				
+						</ul>
+				</li>
+					
+				<li class="a1"><a href="#">Jquery框架</a>
+					<ul class="a2">
+							<li><a href="#">Html5</a></li>
+							<li><a href="#">css3</a></li>
+							<li><a href="#">JAVASCRIPT</a></li>
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>				
+						</ul>
+				</li>
+					
+		</ul>
+	</li>
+	<li name="submenu"><a href="#">WEB后端</a>
+		<ul>
+				<li class="a1"><a href="#">PHP编程</a>
+					<ul class="a2">
+						<li><a href="#">Html5</a></li>
+						<li><a href="#">css3</a></li>
+						<li><a href="#">JAVASCRIPT</a></li>
+						<li><a href="#">Jquery框架</a></li>	
+						<li><a href="#">Jquery框架</a></li>	
+						<li><a href="#">Jquery框架</a></li>
+						<li><a href="#">Jquery框架</a></li>	
+						<li><a href="#">Jquery框架</a></li>				
+					</ul>
+				</li>
+					
+				<li class="a1"><a href="#">JAVA编程</a>
+						<ul class="a2">
+							<li><a href="#">Html5</a></li>
+							<li><a href="#">css3</a></li>
+							<li><a href="#">JAVASCRIPT</a></li>
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>				
+						</ul>
+				</li>
+					
+				<li class="a1"><a href="#">Mysql数据库</a>
+						<ul class="a2">
+							<li><a href="#">Html5</a></li>
+							<li><a href="#">css3</a></li>
+							<li><a href="#">JAVASCRIPT</a></li>
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>				
+						</ul>
+				
+				</li>
+					
+				<li class="a1"><a href="#">SQLserver数据库</a>
+					<ul class="a2">
+							<li><a href="#">Html5</a></li>
+							<li><a href="#">css3</a></li>
+							<li><a href="#">JAVASCRIPT</a></li>
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>
+							<li><a href="#">Jquery框架</a></li>	
+							<li><a href="#">Jquery框架</a></li>				
+						</ul>
+				</li>	
+		</ul>
+	</li>
+
+</ul>
+</div>
+</body>
+
+<script src="a_JQ/jquery-1.11.1.min.js"></script>
+<script>
+	$(function(){
+		$("#nav>li").hover(
+			function(){
+				$(this).find("ul:first").slideToggle(1000)
+			},function(){
+				$(this).find("ul:first").slideToggle(1000)		
+			}
+		)
+	$(".a1").hover(
+			function(){
+				$(this).find("ul").fadeToggle(1000)			
+			},function(){
+				$(this).find("ul").fadeToggle(1000)		
+			}
+		)
+	})
+
+	
+</script>
+</html>

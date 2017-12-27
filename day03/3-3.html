@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JQuery 制作邮件删除效果</title>
+<link rel="stylesheet" type="text/css" href="css/3-3.css">
+<script src="js/jquery-1.8.3.js"></script>
+<script>
+$(function(){
+	//全选  or  全不选
+	$('div div a:eq(0)').toggle(
+	function(){$("input[name=Select]").attr("checked",'true');},
+	function(){$("input[name=Select]").removeAttr("checked");}
+	);
+	//删除选中邮件
+	$('div div a:eq(1)').click(function(){
+		$("input[name=Select]").each(function(){
+			if($(this).attr('checked'))
+			{$(this).parent().parent().remove();}
+		});
+	});
+});
+	
+</script>
+</head>
+<body>
+<center>
+  <div class="warp">
+    <p>收件箱</p>
+    <table>
+      <tr>
+        <td>状态</td>
+        <td>发件人</td>
+        <td>主题</td>
+      </tr>
+      <tr>
+        <td><input name="Select" type="checkbox" value="Select"></td>
+        <td>里德</td>
+        <td>周末出去爬山，去吗？</td>
+      </tr>
+      <tr>
+        <td><input name="Select" type="checkbox" value="Select"></td>
+        <td>德培</td>
+        <td>大爷，你的工作报表还没交呐，再不交这个月末你就等shi啦~~~</td>
+      </tr>
+      <tr>
+        <td><input name="Select" type="checkbox" value="Select"></td>
+        <td>Moscow</td>
+        <td>Are you free tomorrow night? I'm wondering if you're free for dinner.</td>
+      </tr>
+      <tr>
+        <td><input name="Select" type="checkbox" value="Select"></td>
+        <td>贱男春</td>
+        <td>一不小心闹饥荒了，求赞助啊大爷！！！</td>
+      </tr>
+      <tr>
+        <td><input name="Select" type="checkbox" value="Select"></td>
+        <td>MO</td>
+        <td>临时有事，今天就不去找你啦，乖乖上班干活哦，不然回来收拾你o(∩_∩)o </td>
+      </tr>
+      <tr>
+        <td><input name="Select" type="checkbox" value="Select"></td>
+        <td>xxxxx公司</td>
+        <td>恭喜你，你获得我们公司的一等奖：价值1000w的宝马一辆！请汇款5000到......</td>
+      </tr>
+    </table>
+    <div>
+      <a><span>全选 / 全不选</span></a>
+      <a><span>删除邮件</span></a>
+    </div>
+  </div>
+</center>
+</body> 
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<title>菜单说明的淡入淡出</title>
+
+<script type="text/javascript" src="a_JQ/jquery-1.11.1.min.js"></script>
+<script>
+	$(function(){
+		$(".menu a").hover(function(){
+			$(this).next().stop().animate({opacity:"show",top:"-75"},1500)
+		},function(){
+			$(this).next().stop().animate({opacity:"hide",top:"-85"},500)
+		})
+	})
+</script>
+
+
+
+<style type="text/css">
+body {
+	margin: 10px auto;
+	width: 880px;
+	font: 75%/120% Arial, Helvetica, sans-serif;
+}
+.menu {
+	margin: 100px 0 0;
+	padding: 0;
+	list-style: none;
+}
+.menu li {
+	padding: 0;
+	margin: 0 2px;
+	float: left;
+	position: relative;
+	text-align: center;
+}
+.menu a {
+	padding: 14px 10px;
+	display: block;
+	color: #000000;
+	width: 144px;
+	text-decoration: none;
+	font-weight: bold;
+	background: url(images/button.gif) no-repeat center center;
+}
+.menu li em {
+	background: url(images/hover.png) no-repeat;
+	width: 180px;
+	height: 45px;
+	position: absolute;
+	top: -85px;
+	left: -15px;
+	text-align: center;
+	padding: 20px 12px 10px;
+	font-style: normal;
+	z-index: 2;
+	display: none;
+}
+</style>
+</head>
+
+<body>
+
+<ul class="menu">
+	<li>
+		<a href="#">首页</a>	
+		<em>展现网站的精华部分</em>
+	</li>
+	<li>
+		<a href="#">公司简介</a>
+		<em>从这里了解一下公司吧</em>
+	</li>
+	<li>
+		<a href="#">主要产品</a>
+		<em>从这里了解公司的产品和案例</em>
+	</li>
+	<li>
+		<a href="#">招贤纳士</a>
+		<em>招聘志同道合的朋友，欢迎加入</em>
+	</li>
+</ul>
+</body>
+</html>

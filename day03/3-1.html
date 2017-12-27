@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JQ节点练习</title>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script>
+	$(function(){
+		//var $li_1=$('<li></li>');
+		//var $li_2=$('<li></li>');
+		//var $li_1=$('<li>技术支持</li>');
+		//var $li_2=$('<li>关于我们</li>');
+		//$('ul').append($li_1);
+		//$('ul').append($li_2);
+		var  $li_1=$("<li title='合作伙伴'>合作伙伴</li>");
+		var  $li_2=$("<li title='行业洞察'>行业洞察</li>");
+		var  $li_3=$("<li title='媒体中心'>媒体中心</li>");
+		var  $parent =$("ul");
+		var  $two_li =$("ul li:eq(1)");
+		$parent.append($li_1);
+		$parent.prepend($li_2);
+		$li_3.insertAfter($two_li);
+		//移动节点
+		var  $one_li =$("ul li:eq(1)");
+		var  $two_li =$("ul li:eq(2)");
+		$two_li.insertBefore($one_li);
+	})
+</script>
+</head>
+
+<body>
+	<ul>
+    	<li>首页</li>
+        <li>公司简介</li>
+        <li>主要产品</li>
+    </ul>
+</body>
+</html>

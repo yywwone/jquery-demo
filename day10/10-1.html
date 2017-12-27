@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>设计有滑动效果的横向下拉菜单</title>
+
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<script src="a_JQ/jquery-1.11.1.min.js"></script>
+<script>
+	$(function(){
+		$(".mainlevel").hover(function(){
+			$(this).find("ul").stop(true,true).slideDown();
+		},function(){
+			$(this).find("ul").stop(true,true).slideUp();
+		})
+	})
+</script>
+
+</head>
+
+<body>
+<div id="menu">
+ <ul>
+  <li class="mainlevel"><a href="">首页</a> </li>
+  <li class="mainlevel"><a href="">魅力常德 </a>
+    <ul>
+      <li><a href="">常德概况</a></li>
+      <li><a href="">图片常德</a></li>
+    </ul>
+  </li>
+  <li class="mainlevel"><a href="">人文文化</a>
+    <ul>
+      <li><a href="">夹山寺</a></li>
+      <li><a href="">孤峰塔</a></li>
+      <li><a href="">常德诗墙</a></li>
+      <li><a href="">常德丝弦</a></li>
+      <li><a href="">孟姜女贞烈祠</a></li>
+      <li><a href="">城头山文化遗址</a></li>
+    </ul>
+  </li>
+  <li class="mainlevel"><a href="">自然景观</a>
+    <ul>
+      <li><a href="">桃花源</a></li>
+      <li><a href="">柳叶湖</a></li>
+      <li><a href="">壶瓶山</a></li>
+      <li><a href="">夷望溪</a></li>           
+      <li><a href="">花岩溪</a></li>
+    </ul>
+  </li>
+  <li class="mainlevel"><a href="">旅游服务</a>
+    <ul>
+        <li><a href="">特产美食</a></li>
+        <li><a href="">宾馆住宿</a></li>
+    </ul>
+  </li>
+ </ul>
+</div>
+</body>
+</html>

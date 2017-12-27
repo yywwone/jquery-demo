@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JQ选择器练习</title>
+<style type="text/css">
+div, span, p {
+  width: 140px;
+  height: 140px;
+  margin: 5px;
+  background: #aaa;
+  border: #000 1px solid;
+  float: left;
+  font-size: 17px;
+  font-family: Verdana;
+}
+div.mini {
+  width: 55px;
+  height: 55px;
+  background-color: #aaa;
+  font-size: 12px;
+}
+div.hide {
+  display: none;
+}
+</style>
+<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script>
+	$(function(){
+		//基本选择器实例
+		//$('#one').css('background','#bbffaa');
+		//$('.mini').css('background','#bbffaa');
+		//$('div').css('background','#bbffaa');
+		//$('*').css('background','#bbffaa');
+		//$('span,#two').css('background','#bbffaa');
+		
+		//层次选择器实例
+		//$('body div').css('background','#bbffaa');
+		//$('body>div').css('background','#bbffaa');
+		//$('#one+div').css('background','#bbffaa');
+		//$('#two~div').css('background','#bbffaa');
+		
+		//基本过滤选择器实例
+		//$('div:first').css('background','#bbffaa');
+		//$('div:last').css('background','#bbffaa');
+		//$('div:even').css('background','#bbffaa');
+		//$('div:odd').css('background','#bbffaa');
+		//$('div:eq(3)').css('background','#bbffaa');
+		//$('div:gt(3)').css('background','#bbffaa');
+		//$('div:lt(3)').css('background','#bbffaa');
+		//$('div:not(#two)').css('background','#bbffaa');
+		//$(':header').css('background','#bbffaa');
+		//$('#username').focus();
+		//$(':focus').css('background','#bbffaa');
+		
+		//可见性过滤选择器实例
+		//$('div:visible').css('background','#bbffaa');
+		//$('div:hidden').show(1000);                       	//show 显示
+		//$('#one').hide(1000);									//hide隐藏
+																
+		//内容过滤选择器实例
+		//$('div:contains(di)').css('background','#bbffaa');
+		//$('div:empty').css('background','#bbffaa');
+		//$('div:has(.mini)').css('background','#bbffaa');
+		//$('div:parent').css('background','#bbffaa');
+		
+		//属性过滤选择器实例
+		//$('div[title]').css('background','#bbffaa');
+		//$('div[title=test]').css('background','#bbffaa');
+		//$('div[title!=test]').css('background','#bbffaa');
+		//$('div[title^=te]').css('background','#bbffaa');
+		//$('div[title$=est]').css('background','#bbffaa');
+		//$('div[title*=es]').css('background','#bbffaa');
+		//$('div[id][title*=es]').css('background','#bbffaa');
+		
+		//子元素过滤器实例
+		//$('div.one :nth-child(2)').css('background','#bbffaa');
+		//$('div.one :first-child').css('background','#bbffaa');
+		//$('div.one :last-child').css('background','#bbffaa');
+		//$('div.one :only-child').css('background','#bbffaa');
+		
+		
+	})
+</script>
+
+</head>
+<body>
+<div class="one" id="one">
+  id为one，class为one的div
+  <div class="mini">class为mini</div>
+</div>
+<div class="one" id="two" title="test">
+  id为two，class为one，title为test的div
+  <div class="mini" title="other">class为mini，title为other</div>
+  <div class="mini" title="test">class为mini，title为test</div>
+</div>
+<div class="one">
+  <div class="mini">class为mini</div>
+  <div class="mini">class为mini</div>
+  <div class="mini">class为mini</div>
+  <div class="mini"></div>
+</div>
+<div class="one">
+  <div class="mini">class为mini</div>
+  <div class="mini">class为mini</div>
+  <div class="mini">class为mini</div>
+  <div class="mini" title="tests">class为mini，title为tests</div>
+</div>
+<div style="display: none;" class="one">style的display为none的div</div>
+<div class="hide">class为hide的div</div>
+<div>包含input的type为hidden的div<input type="hidden" size="8" value="input隐藏标记"/><input type="text" size="8" value="文本框" id="username"/><input type="password" size="8" value="密码框"/></div>
+<span id=move>span标签内容动画<h3>标题h3</h3><h2>标题h2</h2></span>
+</body>
+</html>
